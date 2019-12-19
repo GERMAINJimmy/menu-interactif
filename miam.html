@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>A Table !</title>
+</head>
+
+<body>
+    <div class="tableau">
+        <table style="border-collapse: collapse;">
+            <tr>
+                <th style="background-color: darkgray; text-align: center;border: solid 1px black;">Entrées</th>
+                <th style="background-color: darkgray; text-align: center;border: solid 1px black;">Plats</th>
+                <th style="background-color: darkgray; text-align: center;border: solid 1px black;">Desserts</th>
+            </tr>
+            <tr>
+                <td style="text-align: center;border: solid 1px black;border-collapse: collapse">Soupe aux champignons (4€)</td>
+                <td style="text-align: center;border: solid 1px black;border-collapse: collapse">Boeuf bourguignon (7,5€)</td>
+                <td style="text-align: center;border: solid 1px black;border-collapse: collapse">Tarte au citron (3,5€)</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;border: solid 1px black;border-collapse: collapse">Tartare de saumon (4€)</td>
+                <td style="text-align: center;border: solid 1px black;border-collapse: collapse">Moussaka grecque (5,5€)</td>
+                <td style="text-align: center;border: solid 1px black;border-collapse: collapse">Mousse au chocolat (2,75€)</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;border: solid 1px black;border-collapse: collapse">Salade de chèvre (3,5€)</td>
+                <td style="text-align: center;border: solid 1px black;border-collapse: collapse">Quiche lorraine (6,5€)</td>
+                <td style="text-align: center;border: solid 1px black;border-collapse: collapse">Sorbet de framboise (3€)</td>
+            </tr>
+        </table>
+    </div><br><br>
+    <div class="formulaire">
+        <form name="miam">
+
+            <label>Votre nom: </label>
+            <input type="text" name="nom" /><br><br>
+            <legend>Choix de l'entrée :</legend><br>
+            <input type="radio" name="entree" value="soupe aux champignons" /><label>Soupe aux champignons</label><br>
+            <input type="radio" name="entree" value="tartare de saumon" /><label>Tartare de saumon</label><br>
+            <input type="radio" name="entree" value="salade de chevre" /><label>Salade de chèvre</label>
+            <br><br><br>
+
+            <legend>Choix du plat principal :</legend><br>
+            <input type="radio" name="plat" value="boeuf bourguignon" /><label>Boeuf bourguignon</label><br>
+            <input type="radio" name="plat" value="moussaka grecque" /><label>Moussaka grecque</label><br>
+            <input type="radio" name="plat" value="quiche lorraine" /><label>Quiche lorraine</label>
+            <br><br><br>
+
+            <legend>Choix du dessert :</legend><br>
+            <input type="radio" name="dessert" value="tarte au citron" /><label>Tarte au citron</label><br>
+            <input type="radio" name="dessert" value="mousse au chocolat" /><label>Mousse au chocolat</label><br>
+            <input type="radio" name="dessert" value="sorbet de framboise" /><label>Sorbet de framboise</label>
+            <br><br><br>
+
+            <label>Prix total: </label>
+            <input type="text" name="total" disable/>
+            <br><br>
+
+            <input type="reset" value="Réinitialiser" />
+            <input type="button" value="Valeur Facture" onclick="calculPrix()" />
+            <input type="button" value="Afficher Choix" onclick="afficherFacture()" />
+        </form>
+    </div>
+
+    <script src="js/miam.js"></script>
+</body></html>
